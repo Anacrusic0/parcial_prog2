@@ -1,0 +1,14 @@
+Actividad es una clase abstracta ya que no va a ser necesario instanciarla directamente, sino mas bine por las clases
+que la heredan, quienes también comparten atributos.
+
+dos de tres clases hijas de Actividad implementan la interfaz ya que tienen comportamientos en comun y para que la interfaz
+sea la responsable del funcionamiento en comun que tienen estas 2
+
+la clase socio depende de actividad ya que recibe una actividad a la que se inscribe (clase inscripcion) con la que tambien
+tiene relacion de dependencia, ya que es necesario crear un objeto inscripcion que tome de este primero(socio)
+
+la clase inscripcion composicion de actividad ya que necesitamos tomar los datos de esta otra clase para poder generar una inscripcion
+
+por ultimo la clase orquestadora (club) esta compuesta por las clases (socio, inscripcion y actividad) ya que necesitamos
+generar un conjunto de los datos
+  
