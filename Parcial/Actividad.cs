@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Parcial
 {
-    public class Actividad
+    public abstract class Actividad
     {
         protected string _nombre;
         public string Nombre
@@ -32,6 +32,6 @@ namespace Parcial
             _cuotaBase = cuotaBase;
         }
 
-        public abstract double CalcularCostoMensual(int cantSesiones);
+        public abstract double CalcularCostoMensual(Actividad actividad, int cantSesiones);
     }
 }

@@ -45,8 +45,8 @@ namespace Parcial
         {
             return CantSesiones;
         }
-        
-        public void CostoTotal (Actividad actividad, int cantSesiones)
+
+        public void CostoTotal(Actividad actividad, int cantSesiones)
         {
             double CostoTotal = actividad.CuotaBase + CostoBase;
             System.Console.WriteLine($"el costo de la actividad elegida es: {actividad.CuotaBase}");

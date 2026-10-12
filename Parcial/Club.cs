@@ -22,17 +22,17 @@ namespace Parcial
             _socios = socios;
         }
 
-        public void RegistrarInscripciones(string dni, Actividad actividad, int cantSesiones)
+        public void RegistrarInscripciones(Socio socio, Actividad actividad, int cantSesiones)
         {
-            _inscripions.Add(new Inscripion(dni,actividad,cantSesiones));
+            _inscripions.Add(new Inscripion(socio.Dni,actividad,cantSesiones));
         }
 
-        public void ReservarTurno(Socio socio, ITurnables turnable)
+        public void RegistrarTurno(Socio socio, ITurnables turnable)
         {
-            if (turnable.CupoMax > 0)
+            if (turnable.TurnosSacados < turnable.CupoMax)
             {
                 System.Console.WriteLine($"el socio con DNI {socio.Dni} tiene turno para asistir de {turnable.DescripcionHorario}");
-                turnable.CupoMax--;
+                turnable.TurnosSacados++;
             }
             else
             {

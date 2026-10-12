@@ -7,7 +7,11 @@ namespace Parcial
 {
     public interface ITurnables
     {
-        public int CupoMax { get; set; }
-        public string DescripcionHorario { get; set; }
+        public int CupoMax { get; }
+        public int TurnosSacados { get; set; }
+        public string DescripcionHorario { get; }
+        
+        public HashSet<Socio> turnados { get; }
     }
+
 }
